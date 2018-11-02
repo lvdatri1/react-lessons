@@ -4,6 +4,7 @@ class TodoList extends Component {
   constructor(props) {
     super(props);
     this.state = { todos: [] };
+   this.handleUpdateTask = this.handleUpdateTask.bind(this);
   }
   componentDidMount() {
     console.log("iniside did mount toolist:", this.props);
@@ -22,11 +23,11 @@ class TodoList extends Component {
     console.log("iniside did update toolist:", this.props);
     // this.setState({todos: this.props.todos});
   }
-  handleUpdateTask(keyT, nameT, completedT) {
+  handleUpdateTask() {
     console.log("good afternoon");
-    let temp = this.state.todos.slice();
-    temp[keyT] = { name: nameT, completed: completedT };
-    this.setState({ todos: temp });
+    // let temp = this.state.todos.slice();
+    // temp[1] = { name: "tao lao", completed: false };
+    // this.setState({ todos: temp });
   }
 
   render() {
@@ -38,9 +39,7 @@ class TodoList extends Component {
           completed={x.completed}
           key={index}
           id={index}
-          updateTask={(keyT, nameT, completedT) =>
-            this.handleUpdateTask(keyT, nameT, completedT)
-          }
+          updateTask={()=>this.handleUpdateTask()}
         />
       );
     });

@@ -14,7 +14,8 @@ class Todo extends Component {
        let x = !this.state.completed;
        this.setState({name: this.state.name, completed: x});
        console.log(this.props);
-       this.props.updateTask(this.props.id, this.state.name, this.state.completed );
+        this.props.updateTask(this.props.id, this.state.name, this.state.completed );
+      //this.props.updateTask(1, "vuui",false);
   }
   render() {
     let temp;
