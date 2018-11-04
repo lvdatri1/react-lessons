@@ -1,9 +1,9 @@
 {
   "todos": [
     {
-      "id": 1,
       "name": "task no 1",
-      "completed": true
+      "completed": true,
+      "id": 1
     },
     {
       "id": 2,
@@ -16,14 +16,14 @@
       "completed": true
     },
     {
-      "id": 4,
       "name": "xxx",
-      "completed": false
+      "completed": false,
+      "id": 4
     },
     {
-      "id": 5,
       "name": "xxx",
-      "completed": false
+      "completed": false,
+      "id": 5
     },
     {
       "id": 6,
@@ -31,9 +31,9 @@
       "completed": false
     },
     {
-      "id": 7,
       "name": "example 1",
-      "completed": false
+      "completed": false,
+      "id": 7
     },
     {
       "id": 8,
@@ -131,9 +131,9 @@
       "completed": false
     },
     {
-      "id": 27,
       "name": "example 1 xxxxx",
-      "completed": false
+      "completed": false,
+      "id": 27
     },
     {
       "id": 28,

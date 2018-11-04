@@ -28,6 +28,7 @@ class TodoList extends Component {
     let temp = this.state.todos.slice();
     temp[index] = { name: name, completed: completed };
     this.setState({ todos: temp });
+    this.props.onUpdate(index, name, completed);
   }
 
   render() {
