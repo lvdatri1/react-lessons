@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 class Todo extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       name: this.props.name,
@@ -9,13 +9,13 @@ class Todo extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(event){
+  handleClick(event) {
     event.preventDefault();
-       let x = !this.state.completed;
-       this.setState({name: this.state.name, completed: x});
-       console.log(this.props);
-        this.props.updateTask(this.props.id, this.state.name, this.state.completed );
-      //this.props.updateTask(1, "vuui",false);
+    let x = !this.state.completed;
+    this.setState({ name: this.state.name, completed: x });
+    console.log(this.props);
+    this.props.updateTask(this.props.id, this.state.name, this.state.completed);
+    //this.props.updateTask(1, "vuui",false);
   }
   render() {
     let temp;
@@ -23,11 +23,11 @@ class Todo extends Component {
       temp = this.state.name;
     } else {
       temp = <u> {this.state.name}</u>
-           
+
     }
     return <li onClick={this.handleClick}>{temp}</li>
-    
-    
+
+
   }
 }
 
